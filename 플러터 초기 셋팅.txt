@@ -1,0 +1,100 @@
+
+
+
+flutter install 검색 후 설치
+
+안드로이드 스튜디오 설치
+
+android studio 열어서 plugins 에서 flutter 검색 후 설치(버전 조절해서 받을때 os 잘 보고 다운 받을것.. 버전 낮춰 받을 떄 자동으로
+다른 os 화면으로 넘어가는 현상 플러터 사이트에 있음)
+
+
+안스에서 sdk manager 열어서 sdk tools에서 android sdk command-line tools 설치
+
+
+
+환경변수 설정
+윈도우는 path 추가 하기 flutter 안에 bin폴더 까지 추가
+
+
+맥에서는
+zsh 기준 termianl 에서
+touch ~/.zshrc      -- (생성)
+open ~/.zshrc        -- (오픈)  
+
+export PATH="$PATH:/플러터경로/bin"    -- 추가 (드랙해서 가능)
+저장하고 닫을 것
+
+
+flutter 프로젝트 생성하기 해서 flutter sdk 위치 설정(flutter 폴더 압축푼곳)
+
+
+lint 끄는법(들여 쓰기 맞춰서 적어야함)
+(analysis_options.yaml)
+
+rules:
+  prefer_const_constructors: false
+  avoid_print: false
+  prefer_typing_uninitialized_variables: false
+  prefer_const_constructors_in_immutables: false
+  prefer_const_literals_to_create_immutables : false
+
+
+
+void main MyApp  밑에서
+stless 치고 자동완성 사용
+
+위젯종류(대문자로 시작, 소괄호)
+Text("")
+
+Icon(Icons.star) (아이콘 이름은 플러터 홈페이지에서 가져다 쓸 수 있음)
+
+Image.asset('경로')  assets 폴더 생성후 그 안에 image파일 넣음
+이미지 사용 할 떄는 등록이 필요함
+pubspec.yaml (앱 필요할 떄 필요한 자료들 정리해놓는 곳 외부 패키지등)
+아래와 같음
+flutter:
+  assets:
+    - assets/ 
+저장 후
+Image.asset('assets/~~') 
+
+
+Container() or Sizedbox()
+Container(width: 50, hegiht: 50, color: Colors.red)
+
+가운데 배치하고 싶을 때 (위치가 잘 배치 안될 때 부모를 조절 해볼 것 )
+Center(
+	child:Contatiner(~~);
+)
+
+
+레이아웃 만드느법 
+Material app -> 구글, 커스터마이징
+cupetino -> 애플 스타일
+
+Scaffold 쓰면 3등분 해줌
+
+home: Scaffold(
+    appBar: AppBar(), 
+    body: Container(),  
+    bottomNavigationBar: BottomAppBar(),
+    )
+
+
+container 대신 가로로 여러개 배치
+Row(
+    children: [
+	아이콘1,
+	아이콘2	
+    ]
+)
+
+반대로는 Column  사용하면됨
+
+mainAxisAlignment: MainAxisAligment.spaceEvenly,
+crossAxisAlignent:  이건 반대축(row기준 column, column기준 row)  
+
+
+
+

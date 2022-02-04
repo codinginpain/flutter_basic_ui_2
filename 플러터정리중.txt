@@ -1,0 +1,13 @@
+
+
+Row 안에서 쓰는것
+mainAxisAlignment: MainAxisAlignment. start etc
+
+
+Flexible 안에 쓰는것
+Flexible 을 여러개 만들고
+각각에 flex 값을 줘서 영역 크기를 정할 수 있음
+
+Container 안에 쓰는것
+alignment: Alignment.centerRight 
+botomRight 등
